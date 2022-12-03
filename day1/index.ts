@@ -1,5 +1,6 @@
 import { readFile } from "fs/promises";
 
+// defining a basic addition arrow function
 const sum = (a,b) => a + b;
 
 const calorieList = (await readFile("input.txt")) // read file 
@@ -19,5 +20,8 @@ const calorieList = (await readFile("input.txt")) // read file
     .sort((a,b) => b-a); // sort array in descending order
 
 console.log("most calories: ", calorieList[0]);
-console.log("top 3: ", calorieList.slice(0,3).reduce(sum))
+console.log("top 3: ", calorieList
+    .slice(0,3) // get top 3
+    .reduce(sum) // add them up
+);
 
