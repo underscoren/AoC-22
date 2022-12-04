@@ -30,7 +30,7 @@ const totalPriorities = inputLines
     .reduce(sum); // sum up all the priorities
 
 const totalBadgePriorities = inputLines
-    .reduce((arr, line, i) => { // group lines into groups of 3
+    .reduce((arr: string[][], line, i) => { // group lines into groups of 3
         const group = Math.floor(i / 3);
         
         if(i%3 == 0)
@@ -47,7 +47,7 @@ const totalBadgePriorities = inputLines
 
         throw new Error(`No duplicate in ${first} ${second} ${third}`);
     })
-    .map(char => alphabetMap[char]) // get prierity value
+    .map(char => alphabetMap[char]) // get priority value
     .reduce(sum); // add them all up
 
 console.log("total priorities:", totalPriorities);
