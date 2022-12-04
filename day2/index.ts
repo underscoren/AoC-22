@@ -31,9 +31,9 @@ const scoreMap = [
 
 const correctScoreMap = ([
    //  R    P    S (opponent)
-/*L*/["Z", "X", "Y"],            /*  Instead of representing outcome, these are now  */
-/*D*/["X", "Y", "Z"],            /*  shapes. For example, if the opponent chooses    */
-/*W*/["Y", "Z", "X"],            /*  Rock and we lose, we must have chosen Scissors  */
+/*L*/["Z", "X", "Y"],            /*  Instead of representing outcome, these are now      */
+/*D*/["X", "Y", "Z"],            /*  shapes. For example, if the opponent chooses        */
+/*W*/["Y", "Z", "X"],            /*  Rock and we Lose, we must have chosen Scissors (Z)  */
 /*(outcome)*/
 ] as Player[][]) /* (thank you typescript, very cool) */
     .map(row => row.map(pick => playerResponses.indexOf(pick) + 1)) // map choices to shape points
